@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+    <title>Ten Years Coronary Heart Disease Prediction System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+	<!--header part-->
+
+<!--form section-->
+<div class="container text-center col-sm-5 col-sm-pull-7 col-10 col-pull-1 mt-3 form_main border rounded">
+    
+    <form class="form-signin col-sm-12 col-12" action="{{ url_for('predict')}}" method="post">
+        <h1 class="h3 mb-4 font-weight-bold mt-4">Ten Years Coronary Heart Disease Prediction System</h1>
+        
+        <input type="text" name="sex(input 1 for male, 0 for female)" id="sex(input 1 for male, 0 for female)" class="form-control mb-3" placeholder="sex(input 1 for male, 0 for female)" required="" autofocus="">
+        <input type="text" name="age" id="age" class="form-control mb-3" placeholder="age" required="" autofocus="">
+        <input type="text" name="currentSmoker(input 1 for yes, 0 for no)" id="currentSmoker(input 1 for yes, 0 for no)" class="form-control mb-3" placeholder="currentSmoker(input 1 for yes, 0 for no)" required="" autofocus="">
+        <input type="text" name="BPMeds(Blood pressure medictaion, input 1 for yes, 0 for no)" id="BPMeds(Blood pressure medictaion, input 1 for yes, 0 for no)" class="form-control mb-3" placeholder="BPMeds(Blood pressure medictaion, input 1 for yes, 0 for no)" required="" autofocus="">
+        <input type="text" name="prevalentHyp(Prevalent hypertension, input 1 for yes, 0 for no)" id="prevalentHyp(Prevalent hypertension, input 1 for yes, 0 for no)" class="form-control mb-3" placeholder="prevalentHyp(Prevalent hypertension, input 1 for yes, 0 for no)" required="" autofocus="">
+        <input type="text" name="totChol(total cholesterol level)" id="totChol(total cholesterol level)" class="form-control mb-3" placeholder="totChol(total cholesterol level)" required="" autofocus="">
+        <input type="text" name="sysBP(systolic blood pressure level)" id="sysBP(systolic blood pressure level)" class="form-control mb-3" placeholder="sysBP(systolic blood pressure level)" required="" autofocus="">
+        <input type="text" name="diaBP(diastolic blood pressure level)" id="diaBP(diastolic blood pressure level)" class="form-control mb-3" placeholder="diaBP(diastolic blood pressure level)" required="" autofocus="">
+        <input type="text" name="BMI(body mass index)" id="BMI(body mass index) " class="form-control mb-3" placeholder="BMI(body mass index) " required="" autofocus="">
+        <input type="text" name="glucose(glucose level)" id="glucose(glucose level)" class="form-control mb-3" placeholder="glucose(glucose level)" required="" autofocus="">
+        
+        
+
+        <button class="btn btn-lg btn-primary btn-block mb-4" type="submit">Ten Years Coronary heart disease Prediction</button>
+    </form>
+
+</div>
+<br><br>
+<div class="container text-center font-weight-bold blockquote display-3">
+    {{prediction_text}}
+</div>
+    
+</body>
+</html>
