@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
 <head>
   <meta charset="UTF-8">
     <title>Ten Years Coronary Heart Disease Prediction System</title>
@@ -21,6 +21,8 @@
     
     <form class="form-signin col-sm-12 col-12" action="{{ url_for('predict')}}" method="post">
         <h1 class="h3 mb-4 font-weight-bold mt-4">Ten Years Coronary Heart Disease Prediction System</h1>
+
+        <h1 class="h3 mb-4 font-weight-Raleway mt-4">The application makes prediction using numerical features (discrete data and continuous data) i.e demographic, behavioral and medical records</h1>
         
         <input type="text" name="sex(input 1 for male, 0 for female)" id="sex(input 1 for male, 0 for female)" class="form-control mb-3" placeholder="sex(input 1 for male, 0 for female)" required="" autofocus="">
         <input type="text" name="age" id="age" class="form-control mb-3" placeholder="age" required="" autofocus="">
@@ -35,7 +37,7 @@
         
         
 
-        <button class="btn btn-lg btn-primary btn-block mb-4" type="submit">Ten Years Coronary heart disease Prediction</button>
+        <button class="btn btn-lg btn-primary btn-block mb-4" type="submit">Ten Years Risk of Coronary heart disease Prediction</button>
     </form>
 
 </div>

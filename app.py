@@ -22,10 +22,10 @@ def predict_api():
     output=round(model.predict(new_data)[0])
     if output == 1:
         # val_ = 'Yes'
-        output = 'You will develop coronary heart disease in 10 years time'
+        output = 'You are at high risk of developing coronary heart disease in 10 years time if you continue with poor lifestyle'
     else:
         # val_ = 'no'
-        output = 'You will not develop coronary heart disease in 10 years time'
+        output = 'You are less likely to develop coronary heart disease in 10 years time if you maintain a good lifestyle'
     return jsonify(output)
 
 @app.route('/predict',methods=['POST'])
@@ -39,12 +39,12 @@ def predict():
     # print(output[0])
     if round(output) == 1:
         val_ = 'Yes'
-        output = 'You will develop coronary heart disease in 10 years time'
+        output = 'You are at high risk of developing coronary heart disease in 10 years time if you continue with poor lifestyle'
     else:
         val_ = 'no'
-        output = 'You will not develop coronary heart disease in 10 years time'
+        output = 'You are less likely to develop coronary heart disease in 10 years time if you maintain a good lifestyle'
 
-    return render_template('index.html', prediction_text="Ten Years Coronary heart disease Prediction: {0}, {1}.".format(val_, output))
+    return render_template('index.html', prediction_text="Ten Years Risk of Coronary heart disease Prediction: {0}, {1}.".format(val_, output))
 
 
 if __name__ == "__main__":
