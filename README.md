@@ -17,3 +17,5 @@ The Framingham Heart Study dataset is a very complex dataset(Big Data) with abou
 >>>>Workflow
 data collection, exploratory data analysis, data cleaning, independednt variables exploration, target class exploration, missing value analysis, statistical analysis of variables, scatter plot analysis, correlation heatmap analysis, feature selection, feature scaling, modelling, cross-validation, statistical testing, boxplot analysis of models, and model deployment as a web-application in Heroku cloud server
  
+Link to app below
+https://coronaryheartdiseasepredictor.herokuapp.com/
