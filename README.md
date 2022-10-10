@@ -15,6 +15,7 @@ The model was compared to Logistic regression classifier, Random forest clasiier
 The Framingham Heart Study dataset is a very complex dataset(Big Data) with about 4000+ rows and 16 columns, 9 features were selected for modelling following SelectKbest feature selection  method which is suitable for classification dataset( having discrete output class). The dataset is an imbalanced dataset, this was balaned with Smote method which upsampled the minority class to level up with the same proportion as the majority class to avoid bias in the modelling.
 
 >>>>Workflow
+
 data collection, exploratory data analysis, data cleaning, independednt variables exploration, target class exploration, missing value analysis, statistical analysis of variables, scatter plot analysis, correlation heatmap analysis, feature selection, feature scaling, modelling, cross-validation, statistical testing, boxplot analysis of models, and model deployment as a web-application in Heroku cloud server
  
 Link to app below
